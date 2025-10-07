@@ -1,0 +1,27 @@
+[
+  {
+    
+    "DepartmentId": 1,
+    "SubjectId": 1
+  },
+  {
+  
+    "DepartmentId": 2,
+    "SubjectId": 2
+  },
+  {
+   
+    "DepartmentId": 3,
+    "SubjectId": 3
+  },
+  {
+  
+    "DepartmentId": 4,
+    "SubjectId": 4
+  },
+  {
+   
+    "DepartmentId": 1,
+    "SubjectId": 2
+  }
+]

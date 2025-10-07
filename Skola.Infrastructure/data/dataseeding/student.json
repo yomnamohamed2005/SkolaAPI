@@ -1,0 +1,30 @@
+[
+  {
+ 
+    "Name": "Youssef Ahmed",
+    "Address": "Cairo",
+    "PhoneNumber": "0123456789",
+    "DepartmentId": 1
+  },
+  {
+
+    "Name": "Mona Hassan",
+    "Address": "Alexandria",
+    "PhoneNumber": "0109876543",
+    "DepartmentId": 2
+  },
+  {
+    
+    "Name": "Ali Mohamed",
+    "Address": "Giza",
+    "PhoneNumber": "0112233445",
+    "DepartmentId": 3
+  },
+  {
+
+    "Name": "Sara Ibrahim",
+    "Address": "Aswan",
+    "PhoneNumber": "0156677889",
+    "DepartmentId": 1
+  }
+] 
