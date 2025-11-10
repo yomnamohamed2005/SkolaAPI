@@ -26,5 +26,17 @@ namespace Skola.Core.Resources
 		public const string BadRequest = "BadRequest";
 
         public  const string  NotEmpty = "NotEmpty";
-    }
+
+		public const string IsExist = "Is Exist";
+
+		public const string DepartmentId = "DepartmentId";
+
+        public  const string IsNotExist = "IsNotExist";
+
+
+
+
+
+
+	}
 }

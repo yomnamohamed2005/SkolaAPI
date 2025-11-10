@@ -1,11 +1,6 @@
 ﻿using MediatR;
 using Skola.Core.Bases;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Skola.Core.student.commands.models
 {

@@ -34,4 +34,9 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Department\Commands\" />
+    <Folder Include="MappingProfiles\Departments\CommandMappig\" />
+  </ItemGroup>
+
 </Project>

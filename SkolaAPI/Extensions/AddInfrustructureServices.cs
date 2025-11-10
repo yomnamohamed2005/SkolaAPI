@@ -13,6 +13,10 @@ namespace SkolaAPI.Extensions
 
 			services.AddScoped<IStudentRepository, StudentRepository>();
 			services.AddScoped<IStudentServices, StudentServices>();
+			services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+			services.AddScoped<IInstructorRepository, InstructorRepository>();
+			services.AddScoped<ISubjectRepository, SubjectRepository>();
+			services.AddScoped<IDepartmentServices, DepartmentServices>();
 			return services;
 		}
 

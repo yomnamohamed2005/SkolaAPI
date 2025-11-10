@@ -121,8 +121,13 @@ namespace Skola.Services.Services
 			return query;
 		}
 
-		
 
-	
+		public IQueryable<Student> GetStudentByDepartmentIdQuerable(int id )
+		{
+			return _studentrepo.GetNoTracking().Where(s=>s.DepartmentId== id).AsQueryable();
+
+		}
+
+
 	}
 }

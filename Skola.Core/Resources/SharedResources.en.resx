@@ -132,6 +132,15 @@
   <data name="departmentName" xml:space="preserve">
     <value>departmentName</value>
   </data>
+  <data name="DepartmetId" xml:space="preserve">
+    <value>Department Id</value>
+  </data>
+  <data name="IsExist" xml:space="preserve">
+    <value>Is Exist </value>
+  </data>
+  <data name="IsNotExist" xml:space="preserve">
+    <value>IsNotExist</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
@@ -143,6 +152,9 @@
   </data>
   <data name="Required" xml:space="preserve">
     <value>This Feild is Required</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>’</value>
   </data>
   <data name="Success" xml:space="preserve">
     <value>Added Successfully</value>

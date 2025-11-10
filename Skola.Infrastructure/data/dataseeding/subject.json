@@ -1,22 +1,22 @@
 [
   {
-   
-    "Name": "Algorithms",
-    "Period": "2025-09-01T00:00:00"
+    "NameAr": "الخوارزميات",
+    "NameEn": "Algorithms",
+    "Period": 4
   },
   {
-    
-    "Name": "Marketing",
-    "Period": "2025-09-01T00:00:00"
+    "NameAr": "التسويق",
+    "NameEn": "Marketing",
+    "Period": 3
   },
   {
-
-    "Name": "Thermodynamics",
-    "Period": "2025-09-01T00:00:00"
+    "NameAr": "الديناميكا الحرارية",
+    "NameEn": "Thermodynamics",
+    "Period": 5
   },
   {
- 
-    "Name": "Design Basics",
-    "Period": "2025-09-01T00:00:00"
+    "NameAr": "أساسيات التصميم",
+    "NameEn": "Design Basics",
+    "Period": 2
   }
-] 
+]

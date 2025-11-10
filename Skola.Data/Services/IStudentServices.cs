@@ -23,6 +23,7 @@ namespace Skola.Data.Services
 
 		public IQueryable<Student> GetStudentQuerable();
 		public IQueryable<Student> FilterStudentPaginatedQuerable(StudentOrderingEnum orderby,string search);
+		public IQueryable<Student> GetStudentByDepartmentIdQuerable(int id );
 
 	}
 }

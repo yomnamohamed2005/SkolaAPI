@@ -15,13 +15,17 @@ namespace Skola.Core.student.commands.validation
 	{
 		private readonly IStudentServices _studentServices;
 		private readonly IStringLocalizer<Skola.Core.Resources.SharedResources> _stringLocalizer;
+		private readonly IDepartmentServices _departmentServices;
 
-		public AddStudentValidator(IStudentServices studentServices,IStringLocalizer<Skola.Core.Resources.SharedResources>stringLocalizer)
+		public AddStudentValidator(IStudentServices studentServices,
+			IStringLocalizer<Skola.Core.Resources.SharedResources>stringLocalizer,
+			IDepartmentServices departmentServices)
         {
 			// ApplyValidatonrules();
 			
 			this._studentServices = studentServices;
 			this._stringLocalizer = stringLocalizer;
+			this._departmentServices = departmentServices;
 			ApplyValidationRules();
 
 			ApplyCustomValidation();
@@ -37,16 +41,29 @@ namespace Skola.Core.student.commands.validation
 				.NotEmpty().WithMessage($"{_stringLocalizer[SharedResourcesKeys.NotEmpty]}")
 				.NotNull().WithMessage("{PropertyName} must not be null")
 				.MaximumLength(20).WithMessage("{PropertyName} must be a maximum of 20 characters");
+
+			RuleFor(x => x.DepartmentId)
+		       .NotEmpty().WithMessage(_stringLocalizer[SharedResourcesKeys.NotEmpty])
+		       .NotNull().WithMessage(_stringLocalizer[SharedResourcesKeys.Required]);
 		}
 
 		public void ApplyCustomValidation()
+
+
         {
-            RuleFor(s => s.NameAr)
+			RuleFor(s => s.DepartmentId)
+			   .MustAsync(async (key, CancellationToken) => await _departmentServices.DepartmentIdIsExist(key))
+			   .WithMessage(_stringLocalizer[SharedResourcesKeys.IsNotExist]);
+
+			RuleFor(s => s.NameAr)
                 .MustAsync(async (key, CancellationToken) => !await _studentServices.IsNameArExist(key))
-                .WithMessage("Name is Already Exist");
+                .WithMessage(_stringLocalizer[SharedResourcesKeys.IsExist]);
+
 			RuleFor(s => s.NameEn)
 			  .MustAsync(async (key, CancellationToken) => !await _studentServices.IsNameEnExist(key))
-			  .WithMessage("Name is Already Exist");
+			  .WithMessage(_stringLocalizer[SharedResourcesKeys.IsExist]);
+
+			
 		}
     }
 }
