@@ -11,11 +11,11 @@ namespace Skola.Infrastructure.Repositories
 {
 	public class SubjectRepository : GenericRepository<Subject>, ISubjectRepository
 	{
-		private readonly dbcontext dbcontext;
+		private readonly dbcontext context;
 
-		public SubjectRepository(dbcontext dbcontext) : base(dbcontext)
+		public SubjectRepository(dbcontext context) : base(context)
 		{
-			this.dbcontext = dbcontext;
+			this.context = context;
 		}
 	}
 }

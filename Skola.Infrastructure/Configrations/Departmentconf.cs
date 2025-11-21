@@ -1,32 +1,30 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Skola.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Skola.Infrastructure.Configrations
+
+namespace SchoolProject.Infrustructure.Configurations
 {
-	public class Departmentconf : IEntityTypeConfiguration<Department>
+	public class DepartmentConfigurations : IEntityTypeConfiguration<Department>
 	{
 		public void Configure(EntityTypeBuilder<Department> builder)
 		{
-			builder.Property(d => d.NameEn).IsRequired().HasMaxLength(100);
-			builder.Property(d => d.NameAr).IsRequired().HasMaxLength(100);
 
-			builder.HasMany(d => d.Student)
-				.WithOne(d=>d.Department)
-				.HasForeignKey(d => d.DepartmentId);
+			builder.HasKey(x => x.Id);
+			builder.Property(x => x.NameAr).HasMaxLength(500);
 
-			builder.HasMany(d => d.Instructors)
-				.WithOne(d=>d.Department)
-				.HasForeignKey(d => d.DepartmentId);
+			builder.HasMany(x => x.Student)
+				  .WithOne(x => x.Department)
+				  .HasForeignKey(x => x.DepartmentId)
+				  .OnDelete(DeleteBehavior.Restrict);
 
 			builder.HasOne(d => d.DepartmentManager)
-				.WithOne(d=>d.ManagerDepartment)
+				.WithOne(d => d.ManagerDepartment)
 				.HasForeignKey<Department>(d => d.DepartmentManagerId);
+
+
+
 		}
 	}
 }
+

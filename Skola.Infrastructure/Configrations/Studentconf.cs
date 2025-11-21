@@ -19,9 +19,11 @@ namespace Skola.Infrastructure.Configrations
 			builder.Property(s => s.PhoneNumber).HasMaxLength(200);
 
 			builder.HasOne(s => s.Department)
-				.WithMany()
+				.WithMany(d=>d.Student)
 				.HasForeignKey(s => s.DepartmentId);
+	
 
+		
 
 		}
 	}

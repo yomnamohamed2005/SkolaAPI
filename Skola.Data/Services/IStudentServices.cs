@@ -15,12 +15,10 @@ namespace Skola.Data.Services
 		public Task<string> AddAsyc(Student student);
 		public Task<bool> IsNameArExist(string name);
 		public Task<bool> IsNameArEXistWithSelf(string name, int id);
-
 		public Task<bool> IsNameEnExist(string name);
 		public Task<bool> IsNameEnEXistWithSelf(string name, int id);
 		public Task<string> EditAsync(Student student);
 		public Task<string> DeleteAsync(Student student);
-
 		public IQueryable<Student> GetStudentQuerable();
 		public IQueryable<Student> FilterStudentPaginatedQuerable(StudentOrderingEnum orderby,string search);
 		public IQueryable<Student> GetStudentByDepartmentIdQuerable(int id );

@@ -1,0 +1,47 @@
+[
+  {
+    "NameAr": "ليلى محمد",
+    "NameEn": "Laila Mohamed",
+    "Address": "Cairo",
+    "Postion": "Senior Instructor",
+    "Salary": 14500.75,
+    "DepartmentId": 1,
+    "SupervisorId": null
+  },
+  {
+    "NameAr": "آدم علاء",
+    "NameEn": "Adam Alaa",
+    "Address": "Giza",
+    "Postion": "Instructor",
+    "Salary": 11000.00,
+    "DepartmentId": 2,
+    "SupervisorId": 4
+  },
+  {
+    "NameAr": "نورهان إبراهيم",
+    "NameEn": "Nourhan Ibrahim",
+    "Address": "Alexandria",
+    "Postion": "Assistant Instructor",
+    "Salary": 8500.25,
+    "DepartmentId": 3,
+    "SupervisorId": null
+  },
+  {
+    "NameAr": "حسام أشرف",
+    "NameEn": "Hossam Ashraf",
+    "Address": "Mansoura",
+    "Postion": "Lead Instructor",
+    "Salary": 17000.00,
+    "DepartmentId": 1,
+    "SupervisorId": null
+  },
+  {
+    "NameAr": "جنى خالد",
+    "NameEn": "Jana Khaled",
+    "Address": "Tanta",
+    "Postion": "Junior Instructor",
+    "Salary": 9000.90,
+    "DepartmentId": 2,
+    "SupervisorId": 2
+  }
+]

@@ -22,6 +22,7 @@ namespace Skola.Infrastructure.Configrations
 			builder.HasOne(s => s.Subject)
 				.WithMany(s => s.students)
 				.HasForeignKey(s => s.SubjectId);
+
 		}
 	}
 }
