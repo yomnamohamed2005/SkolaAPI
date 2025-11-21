@@ -7,6 +7,10 @@ public partial class ApplicatonUserProfile : Profile
 	public ApplicatonUserProfile()
 	{
 		AddUserMappings();
+		GetPaginatedUserMapping();
+		GetUserByIdMapping();
+
+
 	}
 }
 

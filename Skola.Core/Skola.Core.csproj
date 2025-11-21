@@ -36,8 +36,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Department\Commands\" />
-    <Folder Include="Features\Identity\Queries\" />
-    <Folder Include="MappingProfiles\ApplicationUser\Queries\" />
     <Folder Include="MappingProfiles\Departments\CommandMappig\" />
   </ItemGroup>
 
