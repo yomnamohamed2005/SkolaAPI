@@ -1,18 +1,18 @@
 [
   {
-    
-    "Name": "Computer Science"
+    "NameEn": "Computer Science",
+    "NameAr": "علوم حاسب"
   },
   {
-    
-    "Name": "Business Administration"
+    "NameEn": "Business Administration",
+    "NameAr": "إدارة أعمال"
   },
   {
-   
-    "Name": "Mechanical Engineering"
+    "NameEn": "Mechanical Engineering",
+    "NameAr": "هندسة ميكانيكا"
   },
   {
- 
-    "Name": "Architecture"
+    "NameEn": "Architecture",
+    "NameAr": "هندسة معمارية"
   }
 ]

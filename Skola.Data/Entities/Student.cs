@@ -14,8 +14,8 @@ namespace Skola.Data.Entities
 		public string NameEn { get; set; }
 		public  string  Address{ get; set; }
         public string PhoneNumber { get; set; }
-		public int DepartmentId { get; set; }
-		public  Department Department { get; set; }
+        public  int  DepartmentId { get; set; }
+        public  Department Department { get; set; }
         public ICollection<StudentSubject> subjects { get; set; } = new HashSet<StudentSubject>();
     }
 }

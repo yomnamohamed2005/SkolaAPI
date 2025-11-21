@@ -79,7 +79,32 @@ namespace Skola.Infrastructure.data
 					await dbcontext.SaveChangesAsync();
 				}
 			}
-			
+			if (!dbcontext.Instructor.Any())
+			{
+				var instructorsdata = File.ReadAllText("../Skola.Infrastructure/data/dataseeding/instructor.json");
+				var instructors = JsonSerializer.Deserialize<HashSet<Instructor>>(instructorsdata);
+				if (instructors?.Count > 0)
+				{
+					foreach (var instructor in instructors)
+					{
+						await dbcontext.Set<Instructor>().AddAsync(instructor);
+					}
+				}
+				await dbcontext.SaveChangesAsync();
+			}
+			if (!dbcontext.SubjectInstructor.Any())
+			{
+				var subjetinstructorsdata = File.ReadAllText("../Skola.Infrastructure/data/dataseeding/subjectinstructor.json");
+				var subjetinstructors = JsonSerializer.Deserialize<HashSet<SubjectInstructor>>(subjetinstructorsdata);
+				if (subjetinstructors?.Count > 0)
+				{
+					foreach (var subjectinstructor in subjetinstructors)
+					{
+						await dbcontext.Set<SubjectInstructor>().AddAsync(subjectinstructor);
+					}
+					await dbcontext.SaveChangesAsync();
+				}
+			}
 
 		}
 	}

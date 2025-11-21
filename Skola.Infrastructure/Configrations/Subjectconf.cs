@@ -15,6 +15,9 @@ namespace Skola.Infrastructure.Configrations
 		{
 			builder.Property(p => p.NameEn).IsRequired().HasMaxLength(100);
 			builder.Property(p => p.NameAr).IsRequired().HasMaxLength(100);
+			builder.HasKey(x => x.Id);
+
+			
 		}
 	}
 }

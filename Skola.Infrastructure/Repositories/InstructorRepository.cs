@@ -12,12 +12,12 @@ namespace Skola.Infrastructure.Repositories
 {
 	public class InstructorRepository : GenericRepository<Instructor>, IInstructorRepository
 	{
-		private readonly dbcontext dbcontext;
+		private readonly dbcontext _dbcontext;
 
-		public InstructorRepository(dbcontext dbcontext) : base(dbcontext)
+		public InstructorRepository(dbcontext context) : base(context)
 		{
 	
-			this.dbcontext = dbcontext;
+			this._dbcontext = context;
 		}
 
 	}

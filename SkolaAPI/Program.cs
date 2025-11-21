@@ -32,6 +32,8 @@ namespace SkolaAPI
 
 			// Custom Services
 			builder.Services.AddInfrustructureService();
+			builder.Services.AddIdentityService(builder.Configuration);
+
 			builder.Services.Addmodule();
 
 			// Localization

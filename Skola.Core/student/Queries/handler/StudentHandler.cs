@@ -22,7 +22,7 @@ namespace Skola.Core.student.Queries.handler
 		private readonly IMapper _mapper;
 		private readonly IStringLocalizer<Skola.Core.Resources.SharedResources> _stringLocalizer;
 
-		public StudentHandler(IStudentServices studentservices, IMapper mapper, IStringLocalizer<Skola.Core.Resources.SharedResources> stringLocalizer):base(stringLocalizer)
+		public StudentHandler(IStudentServices studentservices, IMapper mapper, IStringLocalizer<Skola.Core.Resources.SharedResources> stringLocalizer) : base(stringLocalizer)
 		{
 			this._studentservices = studentservices;
 			this._mapper = mapper;
@@ -40,25 +40,25 @@ namespace Skola.Core.student.Queries.handler
 			result.Meta = new { Count = mappingstudent.Count() };
 			return result;
 		}
-			public async Task<Response<StudentDto>> Handle(GetStudentQuery request, CancellationToken cancellationToken)
-			{
-				var student = await _studentservices.GetStudentById(request.Id);
-				if (student is null) return NotFound<StudentDto>(_stringLocalizer[SharedResourcesKeys.NotFound]);
-				var Mappingstudent = _mapper.Map<StudentDto>(student);
-				return Success(Mappingstudent);
+		public async Task<Response<StudentDto>> Handle(GetStudentQuery request, CancellationToken cancellationToken)
+		{
+			var student = await _studentservices.GetStudentById(request.Id);
+			if (student is null) return NotFound<StudentDto>(_stringLocalizer[SharedResourcesKeys.NotFound]);
+			var Mappingstudent = _mapper.Map<StudentDto>(student);
+			return Success(Mappingstudent);
 
-			}
+		}
 
-			public async Task<PaginatedResult<GetStudentListPaginationResponse>> Handle(GetStudentPaginatedListQuery request, CancellationToken cancellationToken)
-			{
-				Expression<Func<Student, GetStudentListPaginationResponse>> expression = e => new GetStudentListPaginationResponse(e.Id, e.Localize(e.NameAr,e.NameEn), e.Address, e.Department.Localize(e.NameAr,e.NameEn));
-				var FilterQuery = _studentservices.FilterStudentPaginatedQuerable(request.OrderBy, request.Search);
-				var PaginatedList = await FilterQuery.Select(expression).ToPaginatedListAsync(request.PageNumber, request.PageSize);
-				PaginatedList.Meta = new { Count = PaginatedList.Data.Count() };
-				return PaginatedList;
+		public async Task<PaginatedResult<GetStudentListPaginationResponse>> Handle(GetStudentPaginatedListQuery request, CancellationToken cancellationToken)
+		{
+			Expression<Func<Student, GetStudentListPaginationResponse>> expression = e => new GetStudentListPaginationResponse(e.Id, e.Localize(e.NameAr, e.NameEn), e.Address, e.Department.Localize(e.Department.NameAr, e.Department.NameEn));
+			var FilterQuery = _studentservices.FilterStudentPaginatedQuerable(request.OrderBy, request.Search);
+			var PaginatedList = await FilterQuery.Select(expression).ToPaginatedListAsync(request.PageNumber, request.PageSize);
+			PaginatedList.Meta = new { Count = PaginatedList.Data.Count() };
+			return PaginatedList;
 
-			}
+		}
 
-		
+
 	}
-}
+}   
