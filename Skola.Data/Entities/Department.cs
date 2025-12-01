@@ -18,7 +18,6 @@ namespace Skola.Data.Entities
 
         public Instructor DepartmentManager { get; set; }
 
-
         public ICollection<Student> Student { get; set; } = new HashSet<Student>();
         public ICollection<DepartmentSubject> Subjects { get; set; } = new HashSet<DepartmentSubject>();
 

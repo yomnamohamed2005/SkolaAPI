@@ -18,10 +18,10 @@ namespace SkolaAPI.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> Create([FromBody] AddUserCommand command)
+		public async Task<IActionResult> CreateNewUser([FromBody] AddUserCommand command)
 		{
 			var response = await _mediator.Send(command);
-			return Ok(response); 
+			return Ok(response);
 		}
 
 		[HttpGet]
@@ -36,6 +36,27 @@ namespace SkolaAPI.Controllers
 		public async Task<IActionResult> GetStudentByID([FromRoute] int id)
 		{
 			var response = (await _mediator.Send(new GetUserByIdQuery(id)));
+			return Ok(response);
+		}
+		[HttpPut]
+		public async Task<IActionResult> EditExistingUser([FromBody] EditUserCommand editUser)
+		{
+			var response = await _mediator.Send(editUser);
+			return Ok(response);
+		}
+
+		[HttpDelete("{id}")]
+	   public async Task<IActionResult> DeleteUser([FromRoute] int id)
+	   {
+	         var response = await _mediator.Send(new DeleteUserCommand(id));
+		     return Ok(response);
+	        
+	
+	   }
+		[HttpPut("ChangePassword")]
+		public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordCommand changePassword)
+		{
+			var response = await _mediator.Send(changePassword);
 			return Ok(response);
 		}
 	}

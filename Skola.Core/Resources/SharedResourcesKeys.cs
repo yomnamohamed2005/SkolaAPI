@@ -40,8 +40,12 @@ namespace Skola.Core.Resources
 
 		public const string UserNameIsExist = "UserNameIsExist";
 
-		public const string FailedToAddUser = "FailedToAddUser"; 
+		public const string FailedToAddUser = "FailedToAddUser";
 
+		public const string UpdatedFailed = "UpdatedFailed";
 
+		public const string DeletedFailed = "DeletedFailed";
+
+		public const string changedPasswordsuccessfully = "changedPasswordsuccessfully";
     }
 }
