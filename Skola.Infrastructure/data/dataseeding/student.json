@@ -1,30 +1,30 @@
 [
   {
- 
-    "Name": "Youssef Ahmed",
+    "NameAr": "يوسف أحمد",
+    "NameEn": "Youssef Ahmed",
     "Address": "Cairo",
     "PhoneNumber": "0123456789",
     "DepartmentId": 1
   },
   {
-
-    "Name": "Mona Hassan",
+    "NameAr": "منى حسن",
+    "NameEn": "Mona Hassan",
     "Address": "Alexandria",
     "PhoneNumber": "0109876543",
     "DepartmentId": 2
   },
   {
-    
-    "Name": "Ali Mohamed",
+    "NameAr": "علي محمد",
+    "NameEn": "Ali Mohamed",
     "Address": "Giza",
     "PhoneNumber": "0112233445",
     "DepartmentId": 3
   },
   {
-
-    "Name": "Sara Ibrahim",
+    "NameAr": "سارة إبراهيم",
+    "NameEn": "Sara Ibrahim",
     "Address": "Aswan",
     "PhoneNumber": "0156677889",
-    "DepartmentId": 1
+    "DepartmentId": 4
   }
-] 
+]

@@ -14,11 +14,12 @@ namespace Skola.Core.Resources
 
 		public const string Deleted = "Deleted";
 
-
 		public const string Created = "Created";
 
 		public const string Updated = "Updated";
+
 		public const string Success = "Success";
+
 		public const string UnprocessableEntity = "UnprocessableEntity";
 
 		public const string UnAuthorized = "UnAuthorized";
@@ -33,10 +34,18 @@ namespace Skola.Core.Resources
 
         public  const string IsNotExist = "IsNotExist";
 
+		 public  const string PasswordNotEqueltheConfirmPassword = "PasswordNotEqueltheConfirmPassword";
 
+		public const string EmailIsExist = "EmailIsExist";
 
+		public const string UserNameIsExist = "UserNameIsExist";
 
+		public const string FailedToAddUser = "FailedToAddUser";
 
+		public const string UpdatedFailed = "UpdatedFailed";
 
-	}
+		public const string DeletedFailed = "DeletedFailed";
+
+		public const string changedPasswordsuccessfully = "changedPasswordsuccessfully";
+    }
 }

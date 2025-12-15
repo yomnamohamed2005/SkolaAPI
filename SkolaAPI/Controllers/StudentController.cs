@@ -44,7 +44,7 @@ namespace SkolaAPI.Controllers
 			return Ok(response);
 
 		}
-		[HttpPost("Edit")]
+		[HttpPut("Edit")]
 		public async Task<ActionResult> EditStudent(EditStudentCommand command)
 		{
 			var response = await _mediator.Send(command);

@@ -124,17 +124,29 @@
     <value>البيانات المرسلة غير صحيحة
 </value>
   </data>
+  <data name="changedPasswordsuccessfully" xml:space="preserve">
+    <value>تم تغيير الباسورد بنجاح </value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>تم الاضافة بتجاح </value>
   </data>
   <data name="Deleted" xml:space="preserve">
     <value>تم الحذف بنجاح</value>
   </data>
+  <data name="DeletedFailed" xml:space="preserve">
+    <value>فشل فى حذف بيانات هذا المستخدم </value>
+  </data>
   <data name="DepartmentId" xml:space="preserve">
     <value>رقم القسم </value>
   </data>
   <data name="departmentName" xml:space="preserve">
     <value>القسم </value>
+  </data>
+  <data name="EmailIsExist" xml:space="preserve">
+    <value>هذا الايميل موجود</value>
+  </data>
+  <data name="FailedToAddUser" xml:space="preserve">
+    <value>فشل فى اضافة هذا المستخدم</value>
   </data>
   <data name="IsExist" xml:space="preserve">
     <value>هذا موجود </value>
@@ -151,6 +163,12 @@
   <data name="NotEmpty" xml:space="preserve">
     <value>لا يجب ان يكون هذا المورد فارغ </value>
   </data>
+  <data name="PasswordNotEqualconfimPassword" xml:space="preserve">
+    <value>كلمة المرور ليست مطابقة لتأكيد كلمة المرور</value>
+  </data>
+  <data name="PasswordNotEqueltheConfirmPassword" xml:space="preserve">
+    <value>الباسورد لا يتوافق مع الباسود التأكيدى</value>
+  </data>
   <data name="Required" xml:space="preserve">
     <value>هذا الحقل مطلوب </value>
   </data>
@@ -165,5 +183,11 @@
   </data>
   <data name="Updated" xml:space="preserve">
     <value>تم التعديل بنجاح </value>
+  </data>
+  <data name="UpdatedFailed" xml:space="preserve">
+    <value>فشل فى تحديث بيانات هذا المستخدم </value>
+  </data>
+  <data name="UserNameIsExist" xml:space="preserve">
+    <value>هذا المستخدم موجود</value>
   </data>
 </root>
